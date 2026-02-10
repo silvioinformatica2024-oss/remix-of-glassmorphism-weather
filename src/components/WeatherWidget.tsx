@@ -133,7 +133,7 @@ const WeatherWidget = () => {
               </div>
               <div className="flex-1 flex justify-end">
                 <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-glass-border shadow-glass-card">
-                  <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&h=80&fit=crop&crop=face" alt="Profile" className="w-full h-full object-cover" />
+                  
                 </div>
               </div>
             </div>
