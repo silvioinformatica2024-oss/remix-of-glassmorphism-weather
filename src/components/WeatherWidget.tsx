@@ -120,7 +120,7 @@ const WeatherWidget = () => {
               <div className="relative px-2">
                 <SunPath progress={data.sunProgress} />
                 {/* Time & Date centered below arc */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-center">
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center">
                   <p className="text-primary-foreground/70 text-xs">11:21 AM</p>
                   <p className="text-primary-foreground/50 text-[10px]">Fev 2, 2025</p>
                 </div>
