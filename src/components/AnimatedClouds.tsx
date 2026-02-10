@@ -11,11 +11,17 @@ const cloudSizes = {
 
 const Cloud = ({ className = "", size = "md" }: CloudProps) => (
   <div className={`absolute ${cloudSizes[size]} ${className}`}>
-    <svg viewBox="0 0 100 50" fill="none" className="w-full h-full">
-      <ellipse cx="50" cy="35" rx="45" ry="15" fill="white" fillOpacity="0.25" />
-      <ellipse cx="35" cy="28" rx="22" ry="18" fill="white" fillOpacity="0.2" />
-      <ellipse cx="60" cy="25" rx="25" ry="20" fill="white" fillOpacity="0.22" />
-      <ellipse cx="48" cy="22" rx="18" ry="15" fill="white" fillOpacity="0.18" />
+    <svg viewBox="0 0 120 60" fill="none" className="w-full h-full drop-shadow-sm">
+      {/* Main body */}
+      <ellipse cx="60" cy="42" rx="55" ry="16" fill="white" fillOpacity="0.35" />
+      {/* Left bump */}
+      <ellipse cx="38" cy="30" rx="24" ry="22" fill="white" fillOpacity="0.3" />
+      {/* Center bump (tallest) */}
+      <ellipse cx="62" cy="24" rx="28" ry="26" fill="white" fillOpacity="0.32" />
+      {/* Right bump */}
+      <ellipse cx="82" cy="32" rx="20" ry="18" fill="white" fillOpacity="0.28" />
+      {/* Top highlight */}
+      <ellipse cx="55" cy="20" rx="18" ry="14" fill="white" fillOpacity="0.2" />
     </svg>
   </div>
 );

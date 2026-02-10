@@ -166,8 +166,18 @@ const WeatherWidget = () => {
               </div>
             </div>
 
+            {/* Weather alert pill */}
+            <div className="mt-4 flex items-center gap-3 bg-glass-strong backdrop-blur-[16px] rounded-pill px-4 py-3 border border-glass-border shadow-glass-card">
+              <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <p className="text-secondary-foreground text-xs font-medium leading-snug">
+                <span className="font-bold">Tempo Bom:</span> Condições favoráveis para o trabalho de campo.
+              </p>
+            </div>
+
             {/* Metric cards */}
-            <div className="grid grid-cols-2 gap-3 mt-4">
+            <div className="grid grid-cols-2 gap-3 mt-3">
               <div className="bg-glass-strong backdrop-blur-[16px] rounded-card p-4 border border-glass-border shadow-glass-card transition-all duration-500">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-secondary-foreground text-xs font-medium">Qualidade do Ar</span>
