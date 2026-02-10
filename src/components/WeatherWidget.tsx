@@ -157,12 +157,12 @@ const WeatherWidget = () => {
               </div>
 
               {/* Temperature */}
-              <div className="mt-1">
-                <div className="text-primary-foreground transition-all duration-500">
+              <div className="mt-1 bg-glass-strong backdrop-blur-[16px] rounded-card p-4 border border-glass-border shadow-glass-card transition-all duration-500">
+                <div className="text-secondary-foreground transition-all duration-500">
                   <span className="font-light leading-none text-5xl">{data.temp}</span>
                   <span className="text-2xl font-light align-top">°</span>
                 </div>
-                <p className="text-primary-foreground/90 text-sm font-medium mt-1">
+                <p className="text-secondary-foreground/90 text-sm font-medium mt-1">
                   {data.desc}
                 </p>
               </div>
