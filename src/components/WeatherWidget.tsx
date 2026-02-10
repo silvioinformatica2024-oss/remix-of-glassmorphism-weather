@@ -132,9 +132,7 @@ const WeatherWidget = () => {
                 <span className="text-sm font-medium">Calicut, Kerala</span>
               </div>
               <div className="flex-1 flex justify-end">
-                <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-glass-border shadow-glass-card">
-                  
-                </div>
+                
               </div>
             </div>
 
