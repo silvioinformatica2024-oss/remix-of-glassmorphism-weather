@@ -117,27 +117,24 @@ const WeatherWidget = () => {
               />
 
               {/* Sun path - centered */}
-              <div className="px-2">
+              <div className="relative px-2">
                 <SunPath progress={data.sunProgress} />
+                {/* Time & Date centered below arc */}
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-center">
+                  <p className="text-primary-foreground/70 text-xs">11:21 AM</p>
+                  <p className="text-primary-foreground/50 text-[10px]">Fev 2, 2025</p>
+                </div>
               </div>
 
-              {/* Bottom row: Temperature | Time | Date */}
-              <div className="flex items-end justify-between mt-1">
-                <div>
-                  <div className="text-primary-foreground transition-all duration-500">
-                    <span className="text-7xl font-light leading-none">{data.temp}</span>
-                    <span className="text-2xl font-light align-top">°</span>
-                  </div>
-                  <p className="text-primary-foreground/90 text-sm font-medium mt-1">
-                    {data.desc}
-                  </p>
+              {/* Temperature */}
+              <div className="mt-1">
+                <div className="text-primary-foreground transition-all duration-500">
+                  <span className="text-7xl font-light leading-none">{data.temp}</span>
+                  <span className="text-2xl font-light align-top">°</span>
                 </div>
-                <div className="pb-2">
-                  <p className="text-primary-foreground/70 text-xs">11:21 AM</p>
-                </div>
-                <div className="pb-2 text-right">
-                  <p className="text-primary-foreground/70 text-xs">Fev 2, 2025</p>
-                </div>
+                <p className="text-primary-foreground/90 text-sm font-medium mt-1">
+                  {data.desc}
+                </p>
               </div>
             </div>
 
