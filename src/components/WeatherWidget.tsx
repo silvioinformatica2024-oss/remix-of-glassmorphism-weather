@@ -67,7 +67,7 @@ const WeatherWidget = () => {
         </button>
 
         {/* Widget */}
-        <div className="relative w-[400px] rounded-widget overflow-hidden shadow-widget transition-all duration-500">
+        <div className="relative w-[420px] rounded-widget overflow-hidden shadow-widget transition-all duration-500">
           {/* Sky background */}
           <div
             className="absolute inset-0 transition-all duration-700"
@@ -107,36 +107,37 @@ const WeatherWidget = () => {
 
             {/* Sun area */}
             <div className="relative mt-2">
-              {/* Sun sphere - smaller, matching reference */}
+              {/* Sun sphere */}
               <div
-                className="absolute top-0 left-0 w-12 h-12 rounded-full animate-sun-pulse z-10 transition-opacity duration-700"
+                className="absolute top-2 left-0 w-12 h-12 rounded-full animate-sun-pulse z-10 transition-opacity duration-700"
                 style={{
                   background: "radial-gradient(circle at 35% 35%, hsl(40,100%,78%), hsl(36,90%,58%))",
                   opacity: isRainy ? 0.15 : isDarkMode ? 0.3 : 1,
                 }}
               />
 
-              {/* Sun path */}
-              <div className="ml-12 mr-4">
+              {/* Sun path - centered */}
+              <div className="px-2">
                 <SunPath progress={data.sunProgress} />
               </div>
 
-              {/* Temperature */}
-              <div className="absolute bottom-8 left-0">
-                <div className="text-primary-foreground transition-all duration-500">
-                  <span className="text-7xl font-light leading-none">{data.temp}</span>
-                  <span className="text-2xl font-light align-top">°</span>
+              {/* Bottom row: Temperature | Time | Date */}
+              <div className="flex items-end justify-between mt-1">
+                <div>
+                  <div className="text-primary-foreground transition-all duration-500">
+                    <span className="text-7xl font-light leading-none">{data.temp}</span>
+                    <span className="text-2xl font-light align-top">°</span>
+                  </div>
+                  <p className="text-primary-foreground/90 text-sm font-medium mt-1">
+                    {data.desc}
+                  </p>
                 </div>
-                <p className="text-primary-foreground/90 text-sm font-medium mt-1">
-                  {data.desc}
-                </p>
-              </div>
-
-              <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-                <p className="text-primary-foreground/70 text-xs">11:21 AM</p>
-              </div>
-              <div className="absolute bottom-8 right-0">
-                <p className="text-primary-foreground/70 text-xs">Fev 2, 2025</p>
+                <div className="pb-2">
+                  <p className="text-primary-foreground/70 text-xs">11:21 AM</p>
+                </div>
+                <div className="pb-2 text-right">
+                  <p className="text-primary-foreground/70 text-xs">Fev 2, 2025</p>
+                </div>
               </div>
             </div>
 
